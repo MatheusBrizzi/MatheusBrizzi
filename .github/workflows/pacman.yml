@@ -1,34 +1,31 @@
-name: Generate arcade animation
+name: Generate Pacman Game From GitHub Contributions
 
 on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
-
+  schedule:
+    - cron: "0 0 * * *"
   workflow_dispatch:
-
   push:
     branches:
     - main
 
 jobs:
   generate:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-
+    timeout-minutes: 10
+    
     steps:
-      - name: generate pacman-contribution-graph.svg
-        uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          games: 'pacman'
+      - name: generate-github-profile-3d-contrib
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          # Força a geração do gráfico com as cores escuras/pretas
+          THEME: dark
 
-
-      - name: push pacman-contribution-graph.svg to the output branch
+      - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          target_branch: pacman-output
-          build_dir: dist
+          target_branch: output
+          build_dir: profile-3d-contrib
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
