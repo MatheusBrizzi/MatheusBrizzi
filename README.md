@@ -1,7 +1,7 @@
 ## Olá, eu sou o Matheus Brizzi! 👨‍💻✌️
 
 ###
->Sou estudante de Engenharia de Software e técnico em Informática formado pela ETEC. Possuo conhecimentos sólidos em HTML, CSS, JavaScript, Python e MySQL, tecnologias que aplico diariamente na criação de projetos pessoais para evoluir minhas habilidades técnicas. Estou em busca da minha primeira oportunidade no mercado de TI, focado em vagas de Estágio ou Jovem Aprendiz para contribuir e crescer junto a um time de desenvolvimento.
+>Estudante de Engenharia de Software com formação técnica em Informática pela ETEC. Possuo conhecimentos sólidos em desenvolvimento back-end com foco em Java e Spring Boot, além de experiência em desenvolvimento web e banco de dados MySQL. Busco minha primeira oportunidade na área de tecnologia para aplicar e evoluir minhas habilidades em desenvolvimento de APIs e suporte a sistemas.
 
 ###
 
